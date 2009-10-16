@@ -1,4 +1,5 @@
 #summary Authentication Tutorial
+#labels Featured
 
 = Introduction =
 Tweepy supports both basic and oauth authentication.
