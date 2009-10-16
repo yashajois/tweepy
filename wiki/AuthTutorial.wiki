@@ -5,7 +5,7 @@ Tweepy supports both basic and oauth authentication.
 Authentication is handled by tweepy.AuthHandler classes with two
 implementations provided:
     * OAuthHandler
-    * BasicAuthHandler
+    * !BasicAuthHandler
 
 = Basic Authentication =
 Basic authentication uses the user's Twitter username and password
