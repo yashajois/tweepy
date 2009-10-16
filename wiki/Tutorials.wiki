@@ -1,4 +1,0 @@
-#summary Tweepy Tutorials
-#labels Featured
-
-AuthTutorial
