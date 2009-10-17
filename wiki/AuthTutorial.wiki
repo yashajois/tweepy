@@ -138,6 +138,6 @@ auth.set_access_token(key, secret)
 So now that we have our OAuthHandler equiped with an access token, we are ready for business.
 
 {{{
-api = tweepy.OAuthHandler(auth)
+api = tweepy.API(auth)
 api.update_status('tweepy + oauth!')
 }}}
