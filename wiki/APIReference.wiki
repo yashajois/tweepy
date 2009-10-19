@@ -2,6 +2,6 @@
 #labels Featured,Reference
 
 ||Method||Description||
-||[public_timeline]||Returns the 20 most recent public statuses||
+||[#public_timeline]||Returns the 20 most recent public statuses||
 
 ==public_timeline==
