@@ -4,6 +4,10 @@
 ||Method||Description||
 ||[#public_timeline]||Returns the 20 most recent public statuses||
 ||[#home_timeline]||Returns the 20 most recent statuses of user and friends with retweets||
+||#friends_timeline||Returns the 20 most recent statuses of user and friends||
+||#user_timeline||Returns the 20 most recent statuses of the user||
+||#mentions||Returns the 20 most recent mentions||
+||#retweeted_by_me||Returns the 20 most recent retweets posted by the user||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
