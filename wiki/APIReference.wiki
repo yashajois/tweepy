@@ -1,4 +1,5 @@
 #summary Tweepy API class
 #labels Featured,Reference
 
-TODO
+||Method||Description||Links||
+||public_timeline||Returns the 20 most recent public statuses||[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-public_timeline APIDOC]||
