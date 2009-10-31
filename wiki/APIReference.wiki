@@ -31,6 +31,8 @@
 ||[#followers_ids]||Returns array of IDs of users following the specified user||
 ||[#verify_credentials]||Verify supplied user credentials are valid||
 ||[#rate_limit_status]||Query remaining API requests available||
+||[#set_delivery_device]||Set which device to deliver updates to for authenticating user||
+||[#update_profile_colors]||Update profile color scheme||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -298,3 +300,19 @@ Returns the remaining number of API requests available to the requesting user be
 <b>Returns:</b> JSON object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0rate_limit_status API Wiki]
+
+==set_delivery_device==
+Sets which device Twitter delivers updates to for the authenticating user.  Sending "none" as the device parameter will disable SMS updates.
+
+<b>Parameters:</b> device (Required. Valid values: sms OR none)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0update_delivery_device API Wiki]
+
+==update_profile_colors==
+Sets one or more hex values that control the color scheme of the authenticating user's profile page on twitter.com.
+
+<b>Parameters:</b> profile_background_color, profile_text_color, profile_link_color, profile_sidebar_fill_color, profile_sidebar_border_color
+
+<b>Returns:</b> User object
