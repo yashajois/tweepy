@@ -21,6 +21,11 @@
 ||[#followers]||Returns an user's followers||
 ||[#direct_messages]||Returns direct messages sent to the authenticating user||
 ||[#sent_direct_messages]||Returns direct messages sent by the authenticating user||
+||[#send_direct_message]||Sends a new direct message to the specified user||
+||[#destroy_direct_message]||Destroy a direct message||
+||[#create_friendship]||Create a new friendship with the specified user||
+||[#destroy_friendship]||Destroy a friendship with the specified user||
+||[#exists_friendship]||Checks if friendship exists between users||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -198,3 +203,48 @@ Returns direct messages sent by the authenticating user.
 <b>Returns:</b> list of DirectMessage objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-direct_messages%C2%A0sent API Wiki]
+
+==send_direct_message==
+Sends a new direct message to the specified user from the authenticating user.
+
+<b>Parameters:</b> user (Required), text (Required)
+
+<b>Returns:</b> DirectMessage object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-direct_messages%C2%A0new API Wiki]
+
+==destroy_direct_message==
+Destroy a direct message. Authenticating user must be the recipient of the direct message.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> DirectMessage object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-direct_messages%C2%A0destroy API Wiki]
+
+==create_friendship==
+Create a new friendship with the specified user (aka follow).
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friendships%C2%A0create API Wiki]
+
+==destroy_friendship==
+Destroy a friendship with the specified user (aka unfollow).
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friendships%C2%A0destroy API Wiki]
+
+==exists_friendship==
+Checks if a friendship exists between two users. Will return True if user_a follows user_b, otherwise False.
+
+<b>Parameters:</b> user_a (Required), user_b (Required)
+
+<b>Returns:</b> True/False
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friendships-exists API Wiki]
