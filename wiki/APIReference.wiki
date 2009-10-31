@@ -26,6 +26,8 @@
 ||[#create_friendship]||Create a new friendship with the specified user||
 ||[#destroy_friendship]||Destroy a friendship with the specified user||
 ||[#exists_friendship]||Checks if friendship exists between users||
+||[#show_friendship]||Returns detailed information about a relationship between users||
+||[#friends_ids]||Returns array of IDs of users being followed||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -248,3 +250,21 @@ Checks if a friendship exists between two users. Will return True if user_a foll
 <b>Returns:</b> True/False
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friendships-exists API Wiki]
+
+==show_friendship==
+Returns detailed information about the relationship between two users.
+
+<b>Parameters:</b> source_id OR source_screen_name (One of these is required), target_id OR target_screen_name (One of these is required)
+
+<b>Returns:</b> Friendship object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friendships-show API Wiki]
+
+==friends_ids==
+Returns an array containing the IDs of users being followed by the specified user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> list of Integers
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friends%C2%A0ids API Wiki]
