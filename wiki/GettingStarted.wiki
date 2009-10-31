@@ -4,9 +4,6 @@
 = Introduction =
 If you are new to Tweepy, this is the place to begin. The goal of this tutorial is to get you set-up and rolling with Tweepy. We won't go into too much details here, just some important basics.
 
-= Installing =
-TODO
-
 = Hello Tweepy =
 Let's start of with a very basic _hello world_ example.
 
