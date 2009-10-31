@@ -10,6 +10,7 @@
 ||[#retweeted_by_me]||Returns the retweets posted by the user||
 ||[#retweeted_to_me]||Returns the retweets posted by the user's friends||
 ||[#retweets_of_me]||Returns the tweets of the authenticated user that have been retweeted by others.||
+||[#get_status]||Returns a single status specified by the ID||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -90,3 +91,12 @@ Returns the 20 most recent tweets of the authenticated user that have been retwe
 <b>Returns:</b> list of Status objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-retweets_of_me API Wiki]
+
+==get_status==
+Returns a single status specified by the ID parameter.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0show API Wiki]
