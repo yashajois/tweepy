@@ -18,6 +18,9 @@
 ||[#get_user]||Returns information about the specified user||
 ||[#me]||Returns the authenticated user's information||
 ||[#friends]||Returns an user's friends||
+||[#followers]||Returns an user's followers||
+||[#direct_messages]||Returns direct messages sent to the authenticating user||
+||[#sent_direct_messages]||Returns direct messages sent by the authenticating user||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -168,3 +171,30 @@ Returns an user's friends ordered in which they were added 100 at a time. If no 
 <b>Returns:</b> list of User objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0friends API Wiki]
+
+==followers==
+Returns an user's followers ordered in which they were added 100 at a time. If no user is specified by id/screen name, it defaults to the authenticated user.
+
+<b>Parameters:</b> id OR screen_name OR user_id, cursor
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0followers API Wiki]
+
+==direct_messages==
+Returns direct messages sent to the authenticating user.
+
+<b>Parameters:</b> since_id, max_id, count, page
+
+<b>Returns:</b> list of DirectMessage objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-direct_messages API Wiki]
+
+==sent_direct_messages==
+Returns direct messages sent by the authenticating user.
+
+<b>Parameters:</b> since_id, max_id, count, page
+
+<b>Returns:</b> list of DirectMessage objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-direct_messages%C2%A0sent API Wiki]
