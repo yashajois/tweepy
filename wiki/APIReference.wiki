@@ -16,6 +16,8 @@
 ||[#retweet]||Retweets a tweet||
 ||[#retweets]||Returns retweets of a specified tweet||
 ||[#get_user]||Returns information about the specified user||
+||[#me]||Returns the authenticated user's information||
+||[#friends]||Returns an user's friends||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -150,3 +152,19 @@ Returns information about the specified user.
 <b>Returns:</b> User object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-users%C2%A0show API Wiki]
+
+==me==
+Returns the authenticated user's information.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> User object
+
+==friends==
+Returns an user's friends ordered in which they were added 100 at a time. If no user is specified by id/screen name, it defaults to the authenticated user.
+
+<b>Parameters:</b> id OR screen_name OR user_id, cursor
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0friends API Wiki]
