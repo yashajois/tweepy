@@ -14,6 +14,8 @@
 ||[#update_status]||Update the user's status (aka post a tweet)||
 ||[#destroy_status]||Destroy the status specified by the ID||
 ||[#retweet]||Retweets a tweet||
+||[#retweets]||Returns retweets of a specified tweet||
+||[#get_user]||Returns information about the specified user||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -130,3 +132,21 @@ Retweets a tweet. Requires the id of the tweet you are retweeting.
 <b>Returns:</b> Status object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-retweet API Wiki]
+
+==retweets==
+Returns up to 100 of the first retweets of the given tweet.
+
+<b>Parameters:</b> id (Required), count
+
+<b>Returns:</b> list of Status objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-retweets API Wiki]
+
+==get_user==
+Returns information about the specified user.
+
+<b>Parameters:</b> id OR screen_name OR id (One of these is Required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-users%C2%A0show API Wiki]
