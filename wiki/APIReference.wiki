@@ -27,7 +27,10 @@
 ||[#destroy_friendship]||Destroy a friendship with the specified user||
 ||[#exists_friendship]||Checks if friendship exists between users||
 ||[#show_friendship]||Returns detailed information about a relationship between users||
-||[#friends_ids]||Returns array of IDs of users being followed||
+||[#friends_ids]||Returns array of IDs of users being followed by specified user||
+||[#followers_ids]||Returns array of IDs of users following the specified user||
+||[#verify_credentials]||Verify supplied user credentials are valid||
+||[#rate_limit_status]||Query remaining API requests available||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -268,3 +271,30 @@ Returns an array containing the IDs of users being followed by the specified use
 <b>Returns:</b> list of Integers
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-friends%C2%A0ids API Wiki]
+
+==followers_ids==
+Returns an array containing the IDs of users following the specified user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> list of Integers
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-followers%C2%A0ids API Wiki]
+
+==verify_credentials==
+Verify the supplied user credentials are valid.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> User object if credentials are valid, otherwise False
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0verify_credentials API Wiki]
+
+==rate_limit_status==
+Returns the remaining number of API requests available to the requesting user before the API limit is reached for the current hour. Calls to rate_limit_status do not count against the rate limit.  If authentication credentials are provided, the rate limit status for the authenticating user is returned.  Otherwise, the rate limit status for the requester's IP address is returned.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> JSON object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0rate_limit_status API Wiki]
