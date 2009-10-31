@@ -11,6 +11,9 @@
 ||[#retweeted_to_me]||Returns the retweets posted by the user's friends||
 ||[#retweets_of_me]||Returns the tweets of the authenticated user that have been retweeted by others.||
 ||[#get_status]||Returns a single status specified by the ID||
+||[#update_status]||Update the user's status (aka post a tweet)||
+||[#destroy_status]||Destroy the status specified by the ID||
+||[#retweet]||Retweets a tweet||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -100,3 +103,30 @@ Returns a single status specified by the ID parameter.
 <b>Returns:</b> Status object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0show API Wiki]
+
+==update_status==
+Update the authenticated user's status. Statuses that are duplicates or too long will be silently ignored.
+
+<b>Parameters:</b> status (Required), in_reply_to_status_id, lat, long
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0update API Wiki]
+
+==destroy_status==
+Destroy the status specified by the id parameter. The authenticated user must be the author of the status to destroy.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0destroy API Wiki]
+
+==retweet==
+Retweets a tweet. Requires the id of the tweet you are retweeting.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-retweet API Wiki]
