@@ -8,6 +8,7 @@
 ||[#user_timeline]||Returns the statuses of the user||
 ||[#mentions]||Returns the mentions of the user||
 ||[#retweeted_by_me]||Returns the retweets posted by the user||
+||[#retweeted_to_me]||Returns the retweets posted by the user's friends||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -70,3 +71,10 @@ Returns the 20 most recent retweets posted by the authenticating user.
 <b>Returns:</b> list of Status objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-retweeted_by_me API Wiki]
+
+==retweeted_to_me==
+Returns the 20 most recent retweets posted by the authenticating user's friends.
+
+<b>Parameters:</b> since_id, max_id, count, page
+
+<b>Returns:</b> list of Status objects
