@@ -44,6 +44,10 @@
 ||[#create_block]||Blocks the specified user||
 ||[#destroy_block]||Un-blocks the specified user||
 ||[#exists_block]||Checks if an user is blocked||
+||[#blocks]||Returns array of users that are blocked||
+||[#blocks_ids]||Returns array of user IDs that are blocked||
+||[#report_spam]||Report an user as spammer||
+||[#saved_searches]||Returns the authenticated user's saved search queries.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -428,3 +432,39 @@ Checks if the authenticated user is blocking the specified user.
 <b>Returns:</b> True/False
 
 [http://apiwiki.twitter.com/Twitter+REST+API+Method%3A-blocks-exists API Wiki]
+
+==blocks==
+Returns an array of user objects that the authenticating user is blocking.
+
+<b>Parameters:</b> page
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter+REST+API+Method%3A-blocks-blocking API Wiki]
+
+==blocks_ids==
+Returns an array of numeric user ids the authenticating user is blocking.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> list of Integers
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-blocks-blocking-ids API Wiki]
+
+==report_spam==
+The user specified in the id is blocked by the authenticated user and reported as a spammer.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-report_spam API Wiki]
+
+==saved_searches==
+Returns the authenticated user's saved search queries.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> list of SavedSearch objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-saved_searches API Wiki]
