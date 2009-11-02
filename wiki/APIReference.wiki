@@ -48,6 +48,15 @@
 ||[#blocks_ids]||Returns array of user IDs that are blocked||
 ||[#report_spam]||Report an user as spammer||
 ||[#saved_searches]||Returns the authenticated user's saved search queries.||
+||[#get_saved_search]||Retrieve the data for a saved search||
+||[#create_saved_search]||Creates a saved search||
+||[#destroy_saved_search]||Destroys a saved search||
+||[#test]||Invoke the test method||
+||[#search]||Execute a search query||
+||[#trends]||Returns the top ten topics that are currently trending on Twitter||
+||[#trends_current]||Returns the current top 10 trending topics on Twitter.||
+||[#trends_daily]||Returns the top 20 trending topics for each hour in a given day.||
+||[#trends_weekly]||Returns the top 30 trending topics for each day in a given week.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -468,3 +477,84 @@ Returns the authenticated user's saved search queries.
 <b>Returns:</b> list of SavedSearch objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-saved_searches API Wiki]
+
+==get_saved_search==
+Retrieve the data for a saved search owned by the authenticating user specified by the given id.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> SavedSearch object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-saved_searches-show API Wiki]
+
+==create_saved_search==
+Creates a saved search for the authenticated user.
+
+<b>Parameters:</b> query (Required)
+
+<b>Returns:</b> SavedSearch object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-saved_searches-create API Wiki]
+
+==destroy_saved_search==
+Destroys a saved search for the authenticated user. The search specified by id must be owned by the authenticating user.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> SavedSearch object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-saved_searches-destroy API Wiki]
+
+==test==
+Invokes the test method in the Twitter API. Return True if successful, otherwise False.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> True/False
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-help%C2%A0test API Wiki]
+
+==search==
+Returns tweets that match a specified query.
+
+<b>Parameters:</b> q (Required. The search query string.), lang, locale, rpp, page, since_id, geocode, show_user
+
+<b>Returns:</b> list of SearchResult objects
+
+[http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-search API Wiki]
+
+==trends==
+Returns the top ten topics that are currently trending on Twitter.  The response includes the time of the request, the name of each trend, and the url to the Twitter Search results page for that topic.
+
+<b>Parameters:</b> None
+
+<b>Returns:</b> JSON object
+
+[http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-trends API Wiki]
+
+==trends_current==
+Returns the current top 10 trending topics on Twitter.  The response includes the time of the request, the name of each trending topic, and query used on Twitter Search results page for that topic.
+
+<b>Parameters:</b> exclude
+
+<b>Returns:</b> JSON object
+
+[http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-trends-current API Wiki]
+
+==trends_daily==
+Returns the top 20 trending topics for each hour in a given day.
+
+<b>Parameters:</b> date, exclude
+
+<b>Returns:</b> JSON object
+
+[http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-trends-daily API Wiki]
+
+==trends_weekly==
+Returns the top 30 trending topics for each day in a given week.
+
+<b>Parameters:</b> date, exclude
+
+<b>Returns:</b> JSON object
+
+[http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-trends-weekly API Wiki]
