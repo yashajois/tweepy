@@ -1,8 +1,8 @@
 #summary Tweepy API class
 #labels Featured,Reference
-*test*
-||*Method*||*Description*||
-||*Timeline methods*||||
+
+||<b>Method</b>||<b>Description</b>||
+||<b>Timeline methods</b>||||
 ||[#public_timeline]||Returns the 20 most recent public statuses||
 ||[#home_timeline]||Returns the statuses of user and friends with retweets||
 ||[#friends_timeline]||Returns the statuses of user and friends||
@@ -11,7 +11,7 @@
 ||[#retweeted_by_me]||Returns the retweets posted by the user||
 ||[#retweeted_to_me]||Returns the retweets posted by the user's friends||
 ||[#retweets_of_me]||Returns the tweets of the authenticated user that have been retweeted by others.||
-||*Status methods*||||
+||<b>Status methods</b>||||
 ||[#get_status]||Returns a single status specified by the ID||
 ||[#update_status]||Update the user's status (aka post a tweet)||
 ||[#destroy_status]||Destroy the status specified by the ID||
