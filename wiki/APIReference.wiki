@@ -33,6 +33,8 @@
 ||[#rate_limit_status]||Query remaining API requests available||
 ||[#set_delivery_device]||Set which device to deliver updates to for authenticating user||
 ||[#update_profile_colors]||Update profile color scheme||
+||[#update_profile_image]||Update authenticating user's profile image||
+||[#update_profile_background_image]||Update authenticating user's background image||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -316,3 +318,23 @@ Sets one or more hex values that control the color scheme of the authenticating 
 <b>Parameters:</b> profile_background_color, profile_text_color, profile_link_color, profile_sidebar_fill_color, profile_sidebar_border_color
 
 <b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0update_profile_colors API Wiki]
+
+==update_profile_image==
+Update the authenticating user's profile image. Valid formats: GIF, JPG, or PNG
+
+<b>Parameters:</b> filename (Path to image file. Required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0update_profile_image API Wiki]
+
+==update_profile_background_image==
+Update authenticating user's background image. Valid formats: GIF, JPG, or PNG
+
+<b>Parameters:</b> filename (Path to image file. Required), tile
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account C2%A0update_profile_background_image API Wiki]
