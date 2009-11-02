@@ -35,6 +35,9 @@
 ||[#update_profile_colors]||Update profile color scheme||
 ||[#update_profile_image]||Update authenticating user's profile image||
 ||[#update_profile_background_image]||Update authenticating user's background image||
+||[#update_profile]||Update authenticating user's profile||
+||[#favorites]||Returns the favorite statuses for an user||
+||[#create_favorite]||Creates a new favorite status||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -337,4 +340,31 @@ Update authenticating user's background image. Valid formats: GIF, JPG, or PNG
 
 <b>Returns:</b> User object
 
-[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account C2%A0update_profile_background_image API Wiki]
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0update_profile_background_image API Wiki]
+
+==update_profile==
+Sets values that users are able to set under the "Account" tab of their settings page.
+
+<b>Parameters:</b> name, url, location, description
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-account%C2%A0update_profile API Wiki]
+
+==favorites==
+Returns the favorite statuses for the authenticating user or user specified by the ID parameter.
+
+<b>Parameters:</b> id, page
+
+<b>Returns:</b> list of Status objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-favorites API Wiki]
+
+==create_favorite==
+Favorites the status specified in the ID parameter as the authenticating user.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-favorites%C2%A0create API Wiki]
