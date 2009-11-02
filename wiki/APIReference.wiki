@@ -17,20 +17,25 @@
 ||[#destroy_status]||Destroy the status specified by the ID||
 ||[#retweet]||Retweets a tweet||
 ||[#retweets]||Returns retweets of a specified tweet||
+||<b>User methods</b>||||
 ||[#get_user]||Returns information about the specified user||
 ||[#me]||Returns the authenticated user's information||
 ||[#friends]||Returns an user's friends||
 ||[#followers]||Returns an user's followers||
+||<b>Direct Message methods</b>||||
 ||[#direct_messages]||Returns direct messages sent to the authenticating user||
 ||[#sent_direct_messages]||Returns direct messages sent by the authenticating user||
 ||[#send_direct_message]||Sends a new direct message to the specified user||
 ||[#destroy_direct_message]||Destroy a direct message||
+||<b>Friendship methods</b>||||
 ||[#create_friendship]||Create a new friendship with the specified user||
 ||[#destroy_friendship]||Destroy a friendship with the specified user||
 ||[#exists_friendship]||Checks if friendship exists between users||
 ||[#show_friendship]||Returns detailed information about a relationship between users||
+||<b>Social Graph methods</b>||||
 ||[#friends_ids]||Returns array of IDs of users being followed by specified user||
 ||[#followers_ids]||Returns array of IDs of users following the specified user||
+||<b>Account methods</b>||||
 ||[#verify_credentials]||Verify supplied user credentials are valid||
 ||[#rate_limit_status]||Query remaining API requests available||
 ||[#set_delivery_device]||Set which device to deliver updates to for authenticating user||
@@ -38,22 +43,29 @@
 ||[#update_profile_image]||Update authenticating user's profile image||
 ||[#update_profile_background_image]||Update authenticating user's background image||
 ||[#update_profile]||Update authenticating user's profile||
+||<b>Favorite methods</b>||||
 ||[#favorites]||Returns the favorite statuses for an user||
 ||[#create_favorite]||Creates a new favorite status||
 ||[#destroy_favorite]||Destroy a favorite||
+||<b>Notification methods</b>||||
 ||[#enable_notifications]||Enables device notifications||
 ||[#disable_notifications]||Disables device notifications||
+||<b>Block methods</b>||||
 ||[#create_block]||Blocks the specified user||
 ||[#destroy_block]||Un-blocks the specified user||
 ||[#exists_block]||Checks if an user is blocked||
 ||[#blocks]||Returns array of users that are blocked||
 ||[#blocks_ids]||Returns array of user IDs that are blocked||
+||<b>Spam Reporting methods</b>||||
 ||[#report_spam]||Report an user as spammer||
+||<b>Saved Searches methods</b>||||
 ||[#saved_searches]||Returns the authenticated user's saved search queries.||
 ||[#get_saved_search]||Retrieve the data for a saved search||
 ||[#create_saved_search]||Creates a saved search||
 ||[#destroy_saved_search]||Destroys a saved search||
+||<b>Help methods</b>||||
 ||[#test]||Invoke the test method||
+||<b>Search API methods</b>||||
 ||[#search]||Execute a search query||
 ||[#trends]||Returns the top ten topics that are currently trending on Twitter||
 ||[#trends_current]||Returns the current top 10 trending topics on Twitter.||
