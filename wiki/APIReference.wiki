@@ -43,6 +43,7 @@
 ||[#disable_notifications]||Disables device notifications||
 ||[#create_block]||Blocks the specified user||
 ||[#destroy_block]||Un-blocks the specified user||
+||[#exists_block]||Checks if an user is blocked||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -418,3 +419,12 @@ Un-blocks the user specified in the ID parameter for the authenticating user.
 <b>Returns:</b> User object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-blocks%C2%A0destroy API Wiki]
+
+==exists_block==
+Checks if the authenticated user is blocking the specified user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> True/False
+
+[http://apiwiki.twitter.com/Twitter+REST+API+Method%3A-blocks-exists API Wiki]
