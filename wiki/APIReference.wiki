@@ -38,6 +38,11 @@
 ||[#update_profile]||Update authenticating user's profile||
 ||[#favorites]||Returns the favorite statuses for an user||
 ||[#create_favorite]||Creates a new favorite status||
+||[#destroy_favorite]||Destroy a favorite||
+||[#enable_notifications]||Enables device notifications||
+||[#disable_notifications]||Disables device notifications||
+||[#create_block]||Blocks the specified user||
+||[#destroy_block]||Un-blocks the specified user||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -368,3 +373,48 @@ Favorites the status specified in the ID parameter as the authenticating user.
 <b>Returns:</b> Status object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-favorites%C2%A0create API Wiki]
+
+==destroy_favorite==
+Un-favorites the status specified in the ID parameter as the authenticating user.
+
+<b>Parameters:</b> id (Required)
+
+<b>Returns:</b> Status object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-favorites%C2%A0destroy API Wiki]
+
+==enable_notifications==
+Enables device notifications for updates from the specified user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-notifications%C2%A0follow API Wiki]
+
+==disable_notifications==
+Disables notifications for updates from the specified user to the authenticating user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-notifications%C2%A0leave API Wiki]
+
+==create_block==
+Blocks the user specified in the ID parameter as the authenticating user. Destroys a friendship to the blocked user if it exists.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-blocks%C2%A0create API Wiki]
+
+==destroy_block==
+Un-blocks the user specified in the ID parameter for the authenticating user.
+
+<b>Parameters:</b> id OR screen_name OR user_id (One of these is required)
+
+<b>Returns:</b> User object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-blocks%C2%A0destroy API Wiki]
