@@ -1,5 +1,5 @@
 #summary Introduction to Tweepy Cursor objects
-#labels Featured,Tutorial
+#labels Tutorial
 
 = Introduction =
 
