@@ -1,4 +1,4 @@
-#summary Introduction to Tweepy Cursor objects
+#summary Pagination with Cursor objects
 #labels Tutorial
 
 = Introduction =
