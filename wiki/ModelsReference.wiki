@@ -1,4 +1,4 @@
 #summary Tweepy Models
-#labels Featured,Reference
+#labels Reference
 
 TODO
