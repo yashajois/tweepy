@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Here's is a set of code snippets using Tweepy.
+Here is some code snippets to help you out with using Tweepy.
 Feel free to contribute your own snippets or improve the ones here!
 
 ||<b>Name</b>||<b>Description</b>||
