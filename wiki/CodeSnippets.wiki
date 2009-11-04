@@ -9,6 +9,7 @@ Feel free to contribute your own snippets or improve the ones here!
 ||<b>Name</b>||<b>Description</b>||
 ||[#BasicAuth]||Using basic authentication||
 ||[#OAuth]||Using OAuth authentication||
+||[#Pagination]||Performing pagination with the Cursor object||
 
 == !BasicAuth ==
 {{{
@@ -28,4 +29,17 @@ auth.get_access_token("verifier_value")
 
 # Construct the API instance
 api = tweepy.API(auth)
+}}}
+
+== Pagination ==
+{{{
+# Iterate through all of the authenticated user's friends
+for friend in tweepy.Cursor(api.friends).items():
+    # Process the friend here
+    process_friend(friend)
+
+# Iterate through the first 200 statuses in the friends timeline
+for status in tweepy.Cursor(api.friends_timeline).items(200):
+    # Process the status here
+    process_status(status)
 }}}
