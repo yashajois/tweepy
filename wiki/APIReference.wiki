@@ -71,6 +71,12 @@
 ||[#trends_current]||Returns the current top 10 trending topics on Twitter.||
 ||[#trends_daily]||Returns the top 20 trending topics for each hour in a given day.||
 ||[#trends_weekly]||Returns the top 30 trending topics for each day in a given week.||
+||<b>List methods</b>||||
+||[#create_list]||Creates a new list for the authenticated user.||
+||[#destroy_list]||Deletes the specified list.||
+||[#update_list]||Updates the specified list.||
+||[#lists]||List the lists of the specified user.||
+||[#lists_memberships]||List the lists the specified user has been added to.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -572,3 +578,48 @@ Returns the top 30 trending topics for each day in a given week.
 <b>Returns:</b> JSON object
 
 [http://apiwiki.twitter.com/Twitter-Search-API-Method%3A-trends-weekly API Wiki]
+
+==create_list==
+Creates a new list for the authenticated user. Accounts are limited to 20 lists.
+
+<b>Parameters:</b> name (Required), mode (public/private default: public)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-POST-lists API Wiki]
+
+==destroy_list==
+Deletes the specified list. Must be owned by the authenticated user.
+
+<b>Parameters:</b> slug (Required. May also be the list ID.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-DELETE-list-id API Wiki]
+
+==update_list==
+Updates the specified list.
+
+<b>Parameters:</b> slug (Required. May also be the list ID.), name, mode (public/private)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-POST-lists-id API Wiki]
+
+==lists==
+List the lists of the specified user. Private lists will be included if the authenticated users is the same as the user who's lists are being returned.
+
+<b>Parameters:</b> cursor
+
+<b>Returns:</b> list of List objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-lists API Wiki]
+
+==lists_memberships==
+List the lists the specified user has been added to.
+
+<b>Parameters:</b> cursor
+
+<b>Returns:</b> list of List objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-memberships API Wiki]
