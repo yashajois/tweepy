@@ -81,6 +81,11 @@
 ||[#get_list]||Show the specified list.||
 ||[#add_list_member]||Add a member to a list.||
 ||[#remove_list_member]||Removes the specified member from the list.||
+||[#list_members]||Returns the members of the specified list.||
+||[#is_list_member]||Check if a user is a member of the specified list.||
+||[#subscribe_list]||Make the authenticated user follow the specified list.||
+||[#unsubscribe_list]||Unsubscribes the authenticated user form the specified list.||
+||[#list_subscribers]||Returns the subscribers of the specified list.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -663,3 +668,48 @@ Removes the specified member from the list. The authenticated user must be the l
 <b>Returns:</b> List object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-DELETE-list-members API Wiki]
+
+==list_members==
+Returns the members of the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.), cursor
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-members API Wiki]
+
+==is_list_member==
+Check if a user is a member of the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.), id (Required. User to check if is a member on the list or not.)
+
+<b>Returns:</b> User object if user is a member of list, otherwise False.
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-members-id API Wiki]
+
+==subscribe_list==
+Make the authenticated user follow the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-POST-list-subscribers API Wiki]
+
+==unsubscribe_list==
+Unsubscribes the authenticated user form the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-DELETE-list-subscribers API Wiki]
+
+==list_subscribers==
+Returns the subscribers of the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.), cursor
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-subscribers API Wiki]
