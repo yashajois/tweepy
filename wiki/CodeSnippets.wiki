@@ -10,6 +10,7 @@ Feel free to contribute your own snippets or improve the ones here!
 ||[#BasicAuth]||Using basic authentication||
 ||[#OAuth]||Using OAuth authentication||
 ||[#Pagination]||Performing pagination with the Cursor object||
+||[#Follow All]||Script that follows back all followers||
 
 == !BasicAuth ==
 {{{
@@ -42,4 +43,11 @@ for friend in tweepy.Cursor(api.friends).items():
 for status in tweepy.Cursor(api.friends_timeline).items(200):
     # Process the status here
     process_status(status)
+}}}
+
+== Follow All ==
+This snippet will follow every follower of the authenticated user.
+{{{
+for follower in tweepy.Cursor(api.followers).items():
+    follower.follow()
 }}}
