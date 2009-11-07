@@ -45,7 +45,7 @@ for status in tweepy.Cursor(api.friends_timeline).items(200):
     process_status(status)
 }}}
 
-== FollowAll ==
+== !FollowAll ==
 This snippet will follow every follower of the authenticated user.
 {{{
 for follower in tweepy.Cursor(api.followers).items():
