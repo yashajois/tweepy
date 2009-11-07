@@ -77,6 +77,7 @@
 ||[#update_list]||Updates the specified list.||
 ||[#lists]||List the lists of the specified user.||
 ||[#lists_memberships]||List the lists the specified user has been added to.||
+||[#lists_subscriptions]||List the lists the specified user follows.||
 ||[#list_timeline]||Show tweet timeline for members of the specified list.||
 ||[#get_list]||Show the specified list.||
 ||[#add_list_member]||Add a member to a list.||
@@ -633,6 +634,15 @@ List the lists the specified user has been added to.
 <b>Returns:</b> list of List objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-memberships API Wiki]
+
+==lists_subscriptions==
+List the lists the specified user follows.
+
+<b>Parameters:</b> cursor
+
+<b>Returns:</b> list of List objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-subscriptions API Wiki]
 
 ==list_timeline==
 Show tweet timeline for members of the specified list.
