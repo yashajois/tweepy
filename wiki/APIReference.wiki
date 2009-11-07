@@ -77,6 +77,10 @@
 ||[#update_list]||Updates the specified list.||
 ||[#lists]||List the lists of the specified user.||
 ||[#lists_memberships]||List the lists the specified user has been added to.||
+||[#list_timeline]||Show tweet timeline for members of the specified list.||
+||[#get_list]||Show the specified list.||
+||[#add_list_member]||Add a member to a list.||
+||[#remove_list_member]Removes the specified member from the list.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -623,3 +627,39 @@ List the lists the specified user has been added to.
 <b>Returns:</b> list of List objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-memberships API Wiki]
+
+==list_timeline==
+Show tweet timeline for members of the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be the list ID.), since_id, max_id, count, page
+
+<b>Returns:</b> list of Status objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-statuses API Wiki]
+
+==get_list==
+Show the specified list. Private lists will only be shown if the authenticated user owns the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be the list ID.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-id API Wiki]
+
+==add_list_member==
+Add a member to a list. The authenticated user must own the list to be able to add members to it. Lists are limited to having 500 members.
+
+<b>Parameters:</b> slug (Required. May also be the list ID.), id (Required. ID of user to add.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-POST-list-members API Wiki]
+
+==remove_list_member==
+Removes the specified member from the list. The authenticated user must be the list's owner to remove members from the list.
+
+<b>Parameters:</b> slug (Required. May also be the list ID.), id (Required. ID of user to remove.)
+
+<b>Returns:</b> List object
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-DELETE-list-members API Wiki]
