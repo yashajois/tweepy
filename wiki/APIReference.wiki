@@ -86,6 +86,7 @@
 ||[#subscribe_list]||Make the authenticated user follow the specified list.||
 ||[#unsubscribe_list]||Unsubscribes the authenticated user form the specified list.||
 ||[#list_subscribers]||Returns the subscribers of the specified list.||
+||[#is_subscribed_list]||Check if the specified user is a subscriber of the specified list.||
 
 ==public_timeline==
 Returns the 20 most recent statuses from non-protected users who
@@ -695,7 +696,7 @@ Make the authenticated user follow the specified list.
 <b>Returns:</b> List object
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-POST-list-subscribers API Wiki]
-
+http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-subscribers-id
 ==unsubscribe_list==
 Unsubscribes the authenticated user form the specified list.
 
@@ -713,3 +714,12 @@ Returns the subscribers of the specified list.
 <b>Returns:</b> list of User objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-subscribers API Wiki]
+
+==is_subscribed_list==
+Check if the specified user is a subscriber of the specified list.
+
+<b>Parameters:</b> owner (Required.), slug (Required. May also be list ID.), id (Required. User to check if subscribed to the list.)
+
+<b>Returns:</b> User object if user is subscribed to the list, otherwise False.
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-list-subscribers-id API Wiki]
