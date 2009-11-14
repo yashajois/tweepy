@@ -609,7 +609,7 @@ Deletes the specified list. Must be owned by the authenticated user.
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-DELETE-list-id API Wiki]
 
 ==update_list==
-Updates the specified list.
+Updates the specified list. *Note: this current throws a 500. Twitter is looking into the issue.
 
 <b>Parameters:</b> slug (Required. May also be the list ID.), name, mode (public/private)
 
