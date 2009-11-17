@@ -258,8 +258,6 @@ Run a search for users similar to Find People button on Twitter.com; the same re
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-users-search API Wiki]
 
-method status | report a bug
-
 ==direct_messages==
 Returns direct messages sent to the authenticating user.
 
