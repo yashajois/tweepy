@@ -22,6 +22,7 @@
 ||[#me]||Returns the authenticated user's information||
 ||[#friends]||Returns an user's friends||
 ||[#followers]||Returns an user's followers||
+||[#search_users]||Performs an user search||
 ||<b>Direct Message methods</b>||||
 ||[#direct_messages]||Returns direct messages sent to the authenticating user||
 ||[#sent_direct_messages]||Returns direct messages sent by the authenticating user||
@@ -247,6 +248,17 @@ Returns an user's followers ordered in which they were added 100 at a time. If n
 <b>Returns:</b> list of User objects
 
 [http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0followers API Wiki]
+
+==search_users==
+Run a search for users similar to Find People button on Twitter.com; the same results returned by people search on Twitter.com will be returned by using this API (about being listed in the People Search).  It is only possible to retrieve the first 1000 matches from this API.
+
+<b>Parameters:</b> q (Required. The query.), per_page, page
+
+<b>Returns:</b> list of User objects
+
+[http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-users-search API Wiki]
+
+method status | report a bug
 
 ==direct_messages==
 Returns direct messages sent to the authenticating user.
